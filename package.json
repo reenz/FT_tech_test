@@ -2,9 +2,10 @@
   "name": "ft_tech_test",
   "version": "1.0.0",
   "description": "This is a tech test for Financial Times. I will build a website that asks for and stores a simple rating score for using ft.com. This website will be will hosted on Heroku .",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/reenz/FT_tech_test#readme",
   "dependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "chai": "^4.1.2",
