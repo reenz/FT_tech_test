@@ -1,30 +1,23 @@
 {
-  "name": "ft_tech_test",
-  "version": "1.0.0",
-  "description": "This is a tech test for Financial Times. I will build a website that asks for and stores a simple rating score for using ft.com. This website will be will hosted on Heroku .",
-  "main": "app.js",
+  "name": "ft-tech-test",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./bin/www",
     "test": "mocha --exit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reenz/FT_tech_test.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/reenz/FT_tech_test/issues"
-  },
-  "homepage": "https://github.com/reenz/FT_tech_test#readme",
   "dependencies": {
-    "eslint": "^4.19.1",
-    "express": "^4.16.3"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
-    "mocha": "^5.0.5"
+    "mocha": "^5.0.5",
+    "nodemon": "^1.17.2"
   }
 }

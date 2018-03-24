@@ -15,4 +15,14 @@ describe("index page",() => {
       done();
     });
   });
+  it("should have header as Financial Times", (done) => {
+    chai.request(server)
+    .get('/')
+    .end((err, rsp) => {
+      should.not.exist(err);
+      console.log(rsp);
+      rsp.text.should.include("Financial Times");
+      done();
+    });
+  });
 });
