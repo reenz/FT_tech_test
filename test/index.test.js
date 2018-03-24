@@ -9,19 +9,27 @@ describe("index page",() => {
   it("should respond with 200", (done) => {
     chai.request(server)
     .get('/')
-    .end((err, rsp) => {
+    .end((err, res) => {
       should.not.exist(err);
-      rsp.status.should.equal(200);
+      res.status.should.equal(200);
       done();
     });
   });
+
   it("should have header as Financial Times", (done) => {
     chai.request(server)
     .get('/')
-    .end((err, rsp) => {
-      should.not.exist(err);
-      console.log(rsp);
-      rsp.text.should.include("Financial Times");
+    .end((err, res) => {
+      res.text.should.include("Financial Times");
+      done();
+    });
+  });
+
+  it("should contain 'Please rate our website ", (done) => {
+    chai.request(server)
+    .get('/')
+    .end((err, res) => {
+      res.text.should.match(/Please rate our website/);
       done();
     });
   });
