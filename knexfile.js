@@ -3,7 +3,7 @@
 module.exports = {
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/rating_test',
+    connection: 'postgres://localhost/ft_test',
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -15,7 +15,7 @@ module.exports = {
     client: 'pg',
     connection: {
       'user': 'reena',
-      'database': 'rating_dev',
+      'database': 'ft_dev',
       'password': process.env.PG_PASSWORD
     },
     migrations: {
