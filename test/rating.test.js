@@ -66,9 +66,8 @@ describe("rating page", () => {
     chai.request(server)
     .get("/ratings")
     .end((err, res) => {
-      // expected output based on our seed data
-      const expected = {ratings: [1, 2], counts: [2, 1]}
-      res.body.should.equal(expected);
+      res.body.should.have.property('ratings').eql([1, 2]);
+      res.body.should.have.property('counts').eql([2, 1]);
       done();
     });
   });
