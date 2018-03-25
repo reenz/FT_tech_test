@@ -3,7 +3,11 @@
 module.exports = {
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/ft_test',
+    connection: {
+      'user': 'reena',
+      'database': 'ft_dev',
+      'password': process.env.PG_PASSWORD
+    },
     migrations: {
       directory: __dirname + '/db/migrations'
     },
