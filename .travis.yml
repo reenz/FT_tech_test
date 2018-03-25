@@ -3,3 +3,9 @@ language: node_js
 sudo: false
 node_js:
   - "node"
+services:
+  - postgresql
+before_script:
+  - psql -c "create user reena with password ''"
+  - psql -c 'create database pg_test;' -U reena
+  - knex migrate:latest --env test

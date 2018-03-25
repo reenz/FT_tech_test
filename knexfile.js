@@ -5,8 +5,8 @@ module.exports = {
     client: 'pg',
     connection: {
       'user': 'reena',
-      'database': 'ft_dev',
-      'password': process.env.PG_PASSWORD
+      'database': 'ft_test',
+      'password': process.env.PG_PASSWORD || ""
     },
     migrations: {
       directory: __dirname + '/db/migrations'
