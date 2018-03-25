@@ -6,6 +6,6 @@ node_js:
 services:
   - postgresql
 before_script:
-  - psql -c "create user reena with password ''"
+  - psql -c "create user reena with password '';" -U postgres
   - psql -c 'create database pg_test;' -U reena
   - knex migrate:latest --env test
