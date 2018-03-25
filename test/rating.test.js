@@ -11,7 +11,8 @@ describe("rating page",() => {
   it("should display confirmation after submitting rating", (done) => {
     chai.request(server)
     .post('/ratings')
-    .end((err, res) =>{
+    .send({score: "5"})
+    .end((err, res) => {
       should.not.exist(err);
       res.text.should.match(/Thanks for rating/);
       done();

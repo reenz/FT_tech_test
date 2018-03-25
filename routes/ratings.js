@@ -4,10 +4,14 @@ const knex = require("../db/server/knex.js");
 
 /* GET rating listing. */
 router.post('/', (req, res, next) => {
-  const score = req.body["score"];
-  knex("rating").insert({rating: score}).then(() => {
-     res.render("ratings");
-  });
+  const score = req.body.score;
+  if(score) {
+    knex("rating").insert({rating: score}).then(() => {
+      return res.render("ratings");
+   });
+  } else {
+    return res.render("index", {"error_message": "Please provide a score"});
+  }
 });
 
 module.exports = router;

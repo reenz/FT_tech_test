@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <h3>Please rate our website</h3>
-    <form action="/ratings" method="post">
-    <input type="text" name="score" >
+
+<head>
+  <title>Financial Times</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Financial Times</h1>
+  <h3>Please rate our website</h3>
+  <form action="/ratings" method="post">
+    <input type="text" name="score">
     <input type="submit" value="Submit">
-    </form>
-  </body>
+  </form>
+  <% if(typeof error_message !== "undefined") { %>
+    <p><%= error_message %></p>
+  <% } %>
+</body>
+
 </html>
