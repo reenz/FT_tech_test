@@ -8,6 +8,7 @@ chai.use(chaiHttp);
 const server = require("../app.js")
 
 describe("index page",() => {
+
   it("should respond with 200", (done) => {
     chai.request(server)
     .get('/')
@@ -35,4 +36,14 @@ describe("index page",() => {
       done();
     });
   });
+
+  it("should show a user friendly message for a non-existing url", (done) => {
+    chai.request(server)
+    .get("/notfound")
+    .end((err, res) => {
+      res.text.should.include("The page you are looking for doesn't exist");
+      done();
+    });
+  });
+
 });
