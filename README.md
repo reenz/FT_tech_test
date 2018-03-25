@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/reenz/FT_tech_test.svg?branch=master)](https://travis-ci.org/reenz/FT_tech_test)
+
+
 ## FT Cloud Engineer Technical Exercise
 
 This is a tech test for Financial Times. I will build a website that asks for and stores a simple rating score for using ft.com. This website will be will hosted on Heroku .
@@ -13,19 +16,24 @@ So that I can see the popularity of ft.com
 I'd like to see all the ratings
 ```
 
+### Architecture diagram
+
+![Architecture](public/images/ft-app.png)
+
+
 ### Required features
 
-* Build a website ✓
-* Store the Rating ✓
-* Host on cloud ✓
+* Build a website 
+* Store the Rating 
+* Host on cloud 
 * Diagram of the site architecture
 
 ### Optional features
 
 * Templated infrastructure as code
-* Automated testing ✓
-* Origami Components/FT look and feel ✓
-* The ability to view ratings/results ✓
+* Automated testing 
+* Origami Components/FT look and feel 
+* The ability to view ratings/results 
 
 ### Running the application locally
 
