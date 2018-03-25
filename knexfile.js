@@ -4,7 +4,7 @@ module.exports = {
   test: {
     client: 'pg',
     connection: {
-      'user': 'reena',
+      'user': process.env.PG_USER || "reena",
       'database': 'ft_test',
       'password': process.env.PG_PASSWORD || ""
     },
@@ -18,7 +18,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      'user': 'reena',
+      'user': process.env.PG_USER || "reena",
       'database': 'ft_dev',
       'password': process.env.PG_PASSWORD
     },
