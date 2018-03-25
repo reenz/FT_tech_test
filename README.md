@@ -15,9 +15,9 @@ I'd like to see all the ratings
 
 ### Required features
 
-* Build a website
-* Store the Rating
-* Host on cloud
+* Build a website ✓
+* Store the Rating ✓
+* Host on cloud ✓
 * Diagram of the site architecture
 
 ### Optional features

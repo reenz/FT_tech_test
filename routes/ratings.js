@@ -6,12 +6,12 @@ const knex = require("../db/server/knex.js");
 router.post('/', (req, res, next) => {
   const score = req.body.score;
   console.log(`User inputted score is ${score}`);
-  if(score) {
-    knex("rating").insert({rating: score}).then(() => {
+  if (score) {
+    knex("rating").insert({ rating: score }).then(() => {
       return res.render("ratings");
-   });
+    });
   } else {
-    return res.render("index", {"error_message": "Please provide a score"});
+    return res.render("index", { "error_message": "Please provide a score" });
   }
 });
 
