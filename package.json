@@ -1,6 +1,10 @@
 {
   "name": "ft-tech-test",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.7.1"
+  },
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
