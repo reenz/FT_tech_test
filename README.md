@@ -23,9 +23,9 @@ I'd like to see all the ratings
 ### Optional features
 
 * Templated infrastructure as code
-* Automated testing
-* Origami Components/FT look and feel
-* The ability to view ratings/results
+* Automated testing ✓
+* Origami Components/FT look and feel ✓
+* The ability to view ratings/results ✓
 
 ### Running the application locally
 

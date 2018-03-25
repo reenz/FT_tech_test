@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
     <title>Ratings</title>
@@ -13,14 +14,17 @@
 <body>
     <div id="mychart"></div>
     <script>
-        const mapping = ["Needs Improvement", "Neutral", "Happy", "Very Happy"];
-        const data = [{
-            values: <%= JSON.stringify(counts) %>,
-            labels: <%= JSON.stringify(ratings) %>.map(e => mapping[e]),
-            type: 'pie'
-        }];
-        Plotly.newPlot('mychart', data);
+        $(document).ready(() => {
+            $.get("/ratings", (data) => {
+                const mapping = {1: "Not happy", 2: "Neutral", 3: "Happy", 4: "Very Happy"};
+                const plotData = [{
+                    values: data.counts,
+                    labels: data.ratings.map(e => mapping[e]),
+                    type: 'pie'
+                }];
+                Plotly.newPlot('mychart', plotData);
+            });
+        });
     </script>
 </body>
-
 </html>
