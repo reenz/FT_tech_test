@@ -8,5 +8,5 @@ services:
 before_script:
   - psql -c "create user reena with password '';" -U postgres
   - createdb "reena"
-  - psql -c "create database 'ft_test';" -U reena
+  - psql -c "create database ft_test;" -U reena
   - knex migrate:latest --env test
