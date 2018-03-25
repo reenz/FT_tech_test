@@ -5,6 +5,7 @@ const knex = require("../db/server/knex.js");
 /* GET rating listing. */
 router.post('/', (req, res, next) => {
   const score = req.body.score;
+  console.log(`User inputted score is ${score}`);
   if(score) {
     knex("rating").insert({rating: score}).then(() => {
       return res.render("ratings");

@@ -12,8 +12,10 @@
   <h1>Financial Times</h1>
   <h3>Please rate our website</h3>
   <form action="/ratings" method="post">
-    <input type="text" name="score">
-    <input type="submit" value="Submit">
+    <button name="score" value="1" type="submit" class="rating-button">Needs Improvement</button>
+    <button name="score" value="2" type="submit" class="rating-button">Neutral</button>
+    <button name="score" value="3" type="submit" class="rating-button">Happy</button>
+    <button name="score" value="4" type="submit" class="rating-button">Very Happy</button>
   </form>
   <% if(typeof error_message !== "undefined") { %>
     <p><%= error_message %></p>
