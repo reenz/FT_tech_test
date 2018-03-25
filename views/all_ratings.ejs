@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
-    <title>Ratings</title>
-</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
 
 <body>
+
+    <header>
+        <% include partials/header %>
+    </header>
     <div id="mychart"></div>
     <script>
         $(document).ready(() => {
             $.get("/ratings", (data) => {
-                const mapping = {1: "Not happy", 2: "Neutral", 3: "Happy", 4: "Very Happy"};
+                const mapping = { 1: "Not happy", 2: "Neutral", 3: "Happy", 4: "Very Happy" };
                 const plotData = [{
                     values: data.counts,
                     labels: data.ratings.map(e => mapping[e]),
@@ -27,4 +22,3 @@
         });
     </script>
 </body>
-</html>
