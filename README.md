@@ -35,6 +35,13 @@ I'd like to see all the ratings
 * Origami Components/FT look and feel 
 * The ability to view ratings/results 
 
+### Rating Page
+![Home](public/images/home.png)
+
+### All Ratings
+![chart](public/images/chart.png)
+
+
 ### Running the application locally
 
 Local development of this FT rating web application assumes the following are already installed:
@@ -59,6 +66,16 @@ Please run the following commands in bash:
 2. `heroku addons:create heroku-postgresql:hobby-dev`
 3. `git push heroku master`
 4. `heroku run knex migrate:latest --env production`
+
+### Technologies Used
+
+1. Node JS
+2. Express Web App Framework
+3. Knex Postgres Query Builder
+4. Mocha, Chai & Chai-HTTP for testing
+5. Nodemon for auto-reload
+6. Istanbul Code Coverage via nyc
+
 
 ### Future Enhancements
 
