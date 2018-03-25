@@ -24,8 +24,12 @@ router.get('/', (req, res, next) => {
       return Number.parseInt(row.count, 10);
     });
     const data = { "ratings": ratings, "counts": counts };
-    return res.render("all_ratings", data);
+    return res.send(data);
   });
+});
+
+router.get("/all", (req, res, next) => {
+  return res.render("all_ratings");
 });
 
 
