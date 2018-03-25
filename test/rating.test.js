@@ -8,6 +8,7 @@ chai.use(chaiHttp);
 const server = require("../app.js")
 
 describe("rating page",() => {
+
   it("should display confirmation after submitting rating", (done) => {
     chai.request(server)
     .post('/ratings')
@@ -18,4 +19,15 @@ describe("rating page",() => {
       done();
     });
   });
+
+  it("should display validation error when empty score provided", (done) => {
+    chai.request(server)
+    .post("/ratings")
+    .end((err, res) => {
+      should.not.exist(err);
+      res.text.should.include("Please provide a score");
+      done();
+    });
+  });
+
 });
