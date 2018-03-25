@@ -12,15 +12,28 @@
   <h1>Financial Times</h1>
   <h3>Please rate our website</h3>
   <form action="/ratings" method="post">
-    <button name="score" value="1" type="submit" class="rating-button" ><img src="images/nothappy.png"></button>
-   <button name="score" value="2" type="submit" class="rating-button"><img src="images/neutral.png"></button>
-   <button name="score" value="3" type="submit" class="rating-button"><img src="images/happy.png"></button>
-   <button name="score" value="4" type="submit" class="rating-button"><img src="images/veryhappy.png"></button>
- </form>
+
+    <button name="score" value="4" type="submit" class="rating-button">
+      <img src="images/veryhappy.png">
+    </button>
+    <button name="score" value="3" type="submit" class="rating-button">
+      <img src="images/happy.png">
+    </button>
+    <button name="score" value="2" type="submit" class="rating-button">
+      <img src="images/neutral.png">
+    </button>
+    <button name="score" value="1" type="submit" class="rating-button">
+      <img src="images/nothappy.png">
+    </button>
+
+
+  </form>
 
   <% if(typeof error_message !== "undefined") { %>
-    <p><%= error_message %></p>
-  <% } %>
+    <p>
+      <%= error_message %>
+    </p>
+    <% } %>
 </body>
 
 </html>
