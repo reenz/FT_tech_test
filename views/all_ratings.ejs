@@ -17,7 +17,11 @@
                     labels: data.ratings.map(e => mapping[e]),
                     type: 'pie'
                 }];
-                Plotly.newPlot('mychart', plotData);
+                const layout = {
+                    width: 400,
+                    height:400
+                };
+                Plotly.newPlot('mychart', plotData, layout);
             });
         });
     </script>
