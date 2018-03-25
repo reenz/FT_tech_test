@@ -51,12 +51,15 @@ Local development of this FT rating web application assumes the following are al
 
 After you have cloned the repository, please run the below steps:
 
-1. `createdb ft_dev`
-2. `export PG_USER=$(whoami)`
-3. `export PG_PASSWORD=your_password`
-4. `export NODE_ENV=development`
-5. `knex migrate:latest --env development`
-6. `knex migrate:latest --env test`
+1. `createdb ft_dev` 
+2. `createdb ft_test`
+3. `export PG_USER=$(whoami)`
+4. `export PG_PASSWORD=your_password`
+5. `export NODE_ENV=development`
+6. `knex migrate:latest --env development`
+7. `knex migrate:latest --env test`
+8. `npm test` to run tests
+9. `node_modules/nodemon/bin/nodemon.js --exec npm start` to run the server
 
 ### Running the application on Heroku
 
