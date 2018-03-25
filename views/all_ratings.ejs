@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+    <title>Ratings</title>
+</head>
+
+<body>
+    <div id="mychart"></div>
+    <script>
+        const mapping = ["Needs Improvement", "Neutral", "Happy", "Very Happy"];
+        const data = [{
+            values: <%= JSON.stringify(counts) %>,
+            labels: <%= JSON.stringify(ratings) %>.map(e => mapping[e]),
+            type: 'pie'
+        }];
+        Plotly.newPlot('mychart', data);
+    </script>
+</body>
+
+</html>
