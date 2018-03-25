@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 25px "metricweb";
+  font: 15px "metricweb";
   background-color: #FFF1E5;
 }
 
@@ -25,5 +25,9 @@ a {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+#smilie {
+padding-left: 35%;
 }
 
